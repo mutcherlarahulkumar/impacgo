@@ -61,6 +61,7 @@ function HeroSection() {
       className="relative h-screen bg-gradient-to-r from-teal-500 to-purple-600 overflow-hidden"
     >
       <img
+        rel="preload"
         src={bgimg}
         alt="Business Team"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
