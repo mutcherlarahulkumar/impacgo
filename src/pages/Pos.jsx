@@ -6,6 +6,9 @@ import { useLocation } from 'react-router-dom';
 import POSHeader from '../components/POSHeader';
 import maintain from "../assets/maintain.jpg";
 import posimg from "../assets/posimg.jpg"
+import ContactCard from "../components/ContactCard";
+
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -133,6 +136,7 @@ export default function Component() {
         </section>
       </main>
 
+      <ContactCard />            
       <Footer />
     </div>
   );

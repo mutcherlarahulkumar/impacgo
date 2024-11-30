@@ -29,7 +29,7 @@ const ContactCard = () => {
           <FaTwitter size={24} />
         </a>
         <a 
-          href="https://www.linkedin.com" 
+          href="https://www.linkedin.com/company/impacgo-solutions-private-limited/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="mx-2 text-blue-700 hover:text-blue-900 transition duration-200"
