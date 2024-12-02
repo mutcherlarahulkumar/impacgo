@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCog, FaShieldAlt, FaChartLine, FaTools, FaLock, FaCloudUploadAlt, FaHeadset } from "react-icons/fa";
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import POSHeader from '../components/POSHeader';
 import ams from "../assets/ams.jpg";
@@ -84,6 +84,7 @@ const amsBenefits = [
 ]; 
 
 export default function AMS() {
+  const navigate = useNavigate();
   const ScrollToTop = () => {
     const { pathname } = useLocation();
   
@@ -164,7 +165,8 @@ export default function AMS() {
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Ready to enhance your application management?
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+          onClick={()=>{navigate('/contact')}}>
             Contact Us Today
           </button>
         </div>

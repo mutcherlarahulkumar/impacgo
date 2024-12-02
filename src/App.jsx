@@ -6,6 +6,7 @@ import Crm from './pages/Crm';
 import ImplementationServices from './components/ImplementationServices';
 import DevelopmentServices from './components/DevelopmentServices';
 import AMS from './components/AMS';
+import ContactUs from './components/ContactUs';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/services/implementation' element={<ImplementationServices />}/>
         <Route path='/services/development' element={<DevelopmentServices />}/>
         <Route path='/services/ams' element={<AMS />}/>
+        <Route path='/contact' element={<ContactUs />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

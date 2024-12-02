@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCogs, FaMobileAlt, FaDatabase, FaSyncAlt, FaUsers, FaShieldAlt } from "react-icons/fa";
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import POSHeader from "../components/POSHeader";
 import devp from "../assets/devp.png";
@@ -76,6 +76,7 @@ const benefits = [
 ];
 
 export default function DevelopmentServices() {
+  const navigate = useNavigate();
   const ScrollToTop = () => {
     const { pathname } = useLocation();
   
@@ -155,7 +156,8 @@ export default function DevelopmentServices() {
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Ready to enhance your Dynamics 365 Finance and Operations system?
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+          onClick={()=>{navigate('/contact')}}>
             Contact Us Today
           </button>
         </div>

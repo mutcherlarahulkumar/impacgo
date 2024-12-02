@@ -2,7 +2,7 @@ import React from "react";
 import { FaClipboardList, FaCogs, FaDatabase, FaPlug, FaCheckCircle, FaChalkboardTeacher, FaHandHoldingHeart } from "react-icons/fa";
 import Footer from "./Footer";
 import POSHeader from "./POSHeader";
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import ContactCard from "../components/ContactCard";
 import impl from "../assets/financialimg.jpg";
@@ -88,6 +88,7 @@ export default function ImplementationServices() {
   
     return null;
   };
+  const navigate = useNavigate();
   return (
     <div>
     <ScrollToTop />
@@ -179,7 +180,8 @@ export default function ImplementationServices() {
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             Ready to transform your business with Dynamics 365 Finance and Operations?
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+          onClick={()=>{navigate('/contact')}}>
             Contact Us Today
           </button>
         </div>

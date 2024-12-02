@@ -2,7 +2,7 @@ import { FaCheckCircle, FaRocket, FaUsers, FaCogs, FaLightbulb } from "react-ico
 import { MdOutlineCampaign, MdOutlineSupportAgent, MdOutlineEngineering } from "react-icons/md";
 import POSHeader from "../components/POSHeader";
 import CRMHeroSection from "../components/CRMHeroSection";
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import ContactCard from "../components/ContactCard";
@@ -126,6 +126,7 @@ const implementationProcess = [
 ];
 
 export default function Crm() {
+  const navigate = useNavigate();
   return (
     <div> 
       <ScrollToTop />
@@ -232,7 +233,8 @@ export default function Crm() {
           <p className="text-3xl font-extrabold text-gray-900 mb-8 max-w-2xl mx-auto">
             Ready to enhance your customer relationship management with Dynamics 365 CRM?
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 rounded-lg text-lg font-bold shadow-2xl transform transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-700">
+          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 rounded-lg text-lg font-bold shadow-2xl transform transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-700"
+          onClick={()=>{navigate('/contact')}}>
             Get Started
           </button>
         </div>

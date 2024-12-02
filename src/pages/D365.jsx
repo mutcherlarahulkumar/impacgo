@@ -1,7 +1,7 @@
 import POSHeader from "../components/POSHeader";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import IndustriesSupported from "../components/IndestriesSupported";
 import ImplementationServices from "../components/ImplementationServices";
 import DevelopmentServices from "../components/DevelopmentServices";
@@ -22,6 +22,7 @@ const ScrollToTop = () => {
 };
 
 export default function D365FinanceAndOperations() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <ScrollToTop />
@@ -146,7 +147,8 @@ export default function D365FinanceAndOperations() {
               learn more about how Dynamics 365 Finance and Operations can help
               you achieve your goals.
             </p>
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-shadow">
+            <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-shadow"
+            onClick={()=>{navigate('/contact')}}>
               Contact Us
             </button>
           </div>
