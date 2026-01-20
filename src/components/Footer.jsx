@@ -17,7 +17,9 @@ export default function Footer() {
                     {/* D&B Seal */}
                     <div className="bg-white p-2 rounded-md shadow-md min-h-[97px] min-w-[114px] flex items-center justify-center">
                         {!iframeError ? (
-                            <iframe 
+                            <>
+                                console.log("In Here");
+                                <iframe 
                                 id='Iframe1' 
                                 src='https://seal.dnb.com/seal/2WzkR0AzqTnTewZgTkBAxTbFYA==?h=97&w=114' 
                                 width='114' 
@@ -28,6 +30,7 @@ export default function Footer() {
                                 onError={handleIframeError}
                                 sandbox="allow-same-origin allow-scripts"
                             ></iframe>
+                            </>
                         ) : (
                             <a 
                                 href="https://www.dnb.com" 
