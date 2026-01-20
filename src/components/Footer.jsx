@@ -8,7 +8,7 @@ export default function Footer() {
         setIframeError(true);
     };
 
-    
+    console.log("Here");
 
     return (
         <footer className="bg-gray-800 text-white py-8">
@@ -27,7 +27,6 @@ export default function Footer() {
                                 title="D&B Seal Authentication"
                                 className="border-0"
                                 onError={handleIframeError}
-                                console.log("In Here")
                                 sandbox="allow-same-origin allow-scripts"
                             ></iframe>
                             </>
