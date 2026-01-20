@@ -8,8 +8,6 @@ export default function Footer() {
         setIframeError(true);
     };
 
-    console.log("Here");
-
     return (
         <footer className="bg-gray-800 text-white py-8">
             <div className="container mx-auto px-4">
