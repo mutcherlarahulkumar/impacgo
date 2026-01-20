@@ -4,8 +4,11 @@ export default function Footer() {
     const [iframeError, setIframeError] = useState(false);
 
     const handleIframeError = () => {
+        console.log("Error Set back");
         setIframeError(true);
     };
+
+    
 
     return (
         <footer className="bg-gray-800 text-white py-8">
