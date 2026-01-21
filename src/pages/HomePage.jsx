@@ -24,6 +24,7 @@ export default function HomePage() {
         <HeroSection />
         <IndustriesSection />
         <ServicesSection />
+        <AchievementsSection />
         <ProductsSection />
         <ContactSection />
         <LocationMap />
@@ -35,7 +36,13 @@ export default function HomePage() {
 }
 
 function HeroSection() {
-  const services = ['Microsoft Dynamics 365', 'Point of Sale'];
+  const services = [
+    'Microsoft Dynamics 365',
+    'Web & Mobile Development',
+    'ERPNext',' AI&Automation Solutions'
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [currentService, setCurrentService] = useState(services[0]);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -46,10 +53,16 @@ function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
+
       setTimeout(() => {
-        setCurrentService(prev => (prev === services[0] ? services[1] : services[0]));
+        setCurrentIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % services.length;
+          setCurrentService(services[nextIndex]);
+          return nextIndex;
+        });
         setIsVisible(true);
       }, 500);
+
     }, 3000);
 
     return () => clearInterval(interval);
@@ -63,6 +76,7 @@ function HeroSection() {
         alt="Business Team"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
       />
+
       <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Specialized Consulting in
@@ -71,10 +85,12 @@ function HeroSection() {
             {currentService}
           </span>
         </h1>
+
         <p className="text-xl md:text-2xl mb-8 max-w-3xl">
           At Impacgo Solutions, we are committed to delivering customer-focused services with complete
           transparency and strong business ethics.
         </p>
+
         <button
           className="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
           onClick={scrollToPosition}
@@ -82,6 +98,7 @@ function HeroSection() {
           Learn More
         </button>
       </div>
+
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/3">
         <ChevronDown className="h-10 w-10 text-white" />
       </div>
@@ -89,22 +106,52 @@ function HeroSection() {
   );
 }
 
+
 function IndustriesSection() {
-  const industries = ['Retail', 'Supply Chain', 'Manufacturing','Financial Services','Healthcare'];
-  const imgIndustries = [retail, supplyChain, manufacturingImage, financial, health];
+  const industries = [
+    'Manufacturing',
+    'Trading & Distribution',
+    'Retail & E-Commerce',
+    'Healthcare',
+    'Financial Services',
+    'Technology & Consulting'
+  ];
+
+  const imgIndustries = [
+    manufacturingImage,
+    supplyChain,
+    retail,
+    health,
+    financial,
+    manufacturingImage
+  ];
+
+  const descriptions = [
+    'Production optimization, supply chain management, and ERP-driven manufacturing excellence.',
+    'Multi-site trading operations, inventory control, and ERP-integrated distribution networks.',
+    'Omnichannel retail solutions with POS, ERP, and customer experience optimization.',
+    'Patient management, compliance-driven ERP solutions, and healthcare process automation.',
+    'Risk management, financial operations, compliance, and intelligent financial reporting.',
+    'Digital transformation, ERP consulting, and innovation-led enterprise solutions.'
+  ];
 
   return (
     <section id="industries" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">Industries We Serve</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+          Industries We Serve
+        </h2>
+
         <p className="text-lg text-gray-600 mb-12">
-          We provide subject matter experts in various industry domains, where our expertise lies in:
+          Impacgo Solutions delivers industry-specific ERP, automation, and digital
+          transformation solutions across global enterprises.
         </p>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <div
               key={industry}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xxl hover:border-blue-500"
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105"
             >
               <div className="relative h-48">
                 <img
@@ -115,7 +162,9 @@ function IndustriesSection() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{industry}</h3>
-                <p className="text-gray-600">Specialized solutions for {industry.toLowerCase()} businesses.</p>
+                <p className="text-gray-600">
+                  {descriptions[index]}
+                </p>
               </div>
             </div>
           ))}
@@ -125,29 +174,51 @@ function IndustriesSection() {
   );
 }
 
+
 function ServicesSection() {
   const services = [
-    { title: 'Consulting', items: ['Business BluePrint', 'Business Process Reengineering', 'Change Management', 'Project Management & Governance', 'Project Implementation and Delivery'] },
-    { title: 'Technology', items: ['Solution Architecture', 'Testing Management', 'Application Development', 'Solution Deployment', 'Annual Maintenance Support'] }
+    {
+      title: 'ERP & Consulting Services',
+      items: [
+        'Microsoft Dynamics 365 Finance & Operations Implementation',
+        'ERP Integration & Ongoing Support',
+        'Business Process Reengineering',
+        'Change Management & Project Governance',
+        'Training & Knowledge Transfer Programs'
+      ]
+    },
+    {
+      title: 'Technology, AI & Innovation',
+      items: [
+        'Cloud & Application Development',
+        'AI & Intelligent Automation Solutions',
+        'Custom Software Development',
+        'System Testing, Deployment & Optimization',
+        'Annual Maintenance & Managed Support Services'
+      ]
+    }
   ];
 
   return (
     <section id="services" className="py-20 bg-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Our Services
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="bg-white rounded-lg shadow-lg p-6"
             >
-              <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-semibold mb-4">
+                {service.title}
+              </h3>
+
               <ul className="space-y-2">
-                {service.items.map((item, itemIndex) => (
-                  <li
-                    key={item}
-                    className="flex items-center"
-                  >
+                {service.items.map((item) => (
+                  <li key={item} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
                     <span>{item}</span>
                   </li>
@@ -161,30 +232,83 @@ function ServicesSection() {
   );
 }
 
+function AchievementsSection() {
+  const achievements = [
+    { value: '19+', label: 'Years of Experience' },
+    { value: '15+', label: 'Global Implementations' },
+    { value: '8+', label: 'Countries Served' },
+    { value: '10+', label: 'Industries Supported' }
+  ];
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+          Our Achievements
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {achievements.map((item) => (
+            <div
+              key={item.label}
+              className="
+                bg-white
+                border border-gray-200
+                rounded-xl
+                p-6
+                shadow-sm
+                hover:shadow-md
+                transition-shadow
+                duration-300
+              "
+            >
+              <p className="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">
+                {item.value}
+              </p>
+              <p className="text-sm md:text-base text-gray-600 tracking-wide">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+
+
+
 function ProductsSection() {
   const products = [
-    { 
-      name: 'Microsoft D365 Finance & Operations', 
-      description: 'Comprehensive financial and operational management solution.',
-      image: d365,
-      details: 'Manage your entire financial and operational processes in one integrated solution. D365 Finance & Operations helps streamline operations and improve financial visibility.',
-      path: '/services/d365'
-    },
-    { 
-      name: 'Microsoft CRM', 
-      description: 'Customer relationship management system for improved business interactions.',
-      image: crm,
-      details: 'Enhance your customer relationships with powerful CRM tools. Microsoft CRM offers insights into customer interactions, allowing businesses to make data-driven decisions and provide tailored customer service.',
-      path: '/services/crm'
-    },
-    { 
-      name: 'Point of Sale (POS)', 
-      description: 'Custom-tailored POS solutions for retail businesses.',
-      image: pos,
-      details: 'Our POS capabilities support to enable the POS solutions designed specifically for retail environments, providing fast and efficient transaction processing, inventory management, and customer engagement tools to enhance the shopping experience.',
-      path: '/services/pos'
-    }
-  ];
+  {
+    name: 'Microsoft Dynamics 365 Finance & Operations',
+    description: 'Enterprise ERP for finance, operations, manufacturing, and supply chain.',
+    image: d365,
+    details:
+      'Full-scale deployment of Dynamics 365 Finance & Operations tailored to global enterprises, enabling financial control, operational excellence, and regulatory compliance.',
+    path: '/services/d365'
+  },
+  {
+  name: 'Web & Mobile Application Development',
+  description: 'Custom web and mobile applications for modern enterprises.',
+  image: crm, // you can later replace image if needed
+  details:
+    'We design and develop scalable web and mobile applications tailored to business needs, integrating seamlessly with ERP systems, cloud platforms, and enterprise workflows.',
+  path: '/services/app-development'
+},
+  {
+    name: 'Custom POS & Business Applications',
+    description: 'ERP-integrated POS and custom enterprise applications.',
+    image: pos,
+    details:
+      'Custom POS and business applications designed for retail, trading, and multi-site operations, fully integrated with ERP and cloud platforms.',
+    path: '/services/pos'
+  }
+];
+
 
   const navigate = useNavigate();
 

@@ -1,3 +1,4 @@
+
 import { FaCheckCircle, FaCloud, FaCode, FaCog, FaSyncAlt, FaShieldAlt, FaChartLine } from 'react-icons/fa';
 import POSHeroSection from '../components/POSHeroSection';
 import Footer from '../components/Footer';
