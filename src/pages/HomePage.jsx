@@ -36,11 +36,12 @@ export default function HomePage() {
 }
 
 function HeroSection() {
-  const services = [
-    'Microsoft Dynamics 365',
-    'Web & Mobile Development',
-    'ERPNext',' AI&Automation Solutions'
-  ];
+    const services = [
+  'Microsoft Dynamics 365',
+  'Web & Mobile Applications',
+  'ERPNext',
+  'AI&Automation Solutions'
+];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentService, setCurrentService] = useState(services[0]);
