@@ -6,6 +6,8 @@ import POSHeader from "../components/POSHeader";
 import devp from "../assets/devp.png";
 import ContactCard from "../components/ContactCard";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
+import { createServiceSchema } from "../components/schemas";
 const services = [
   {
     title: "Custom Development",
@@ -86,8 +88,21 @@ export default function DevelopmentServices() {
   
     return null;
   };
+  const serviceSchema = createServiceSchema({
+  serviceName: "Dynamics 365 F&O Development and Enhancement",
+  description: "Custom Dynamics 365 F&O development, X++ customisation, system enhancements, integration development, and mobile solutions for D365FO environments.",
+  serviceType: "ERP Development",
+  path: "/services/development",
+});
   return (
     <div>
+      <SEO
+  title="Dynamics 365 F&O Development & Customisation India | X++ Developer | Impacgo"
+  description="Custom Dynamics 365 F&O development and X++ customisation services in India. System enhancements, integrations, mobile solutions, and ongoing technical development."
+  keywords="D365FO development India, X++ developer India, Dynamics 365 customisation India, D365 F&O enhancement India"
+  path="/services/development"
+  schema={serviceSchema}
+/>
     <ScrollToTop />
     <POSHeader />
     <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-100">

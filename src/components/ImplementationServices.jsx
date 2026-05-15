@@ -6,6 +6,8 @@ import { useLocation,useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import ContactCard from "../components/ContactCard";
 import impl from "../assets/financialimg.jpg";
+import SEO from "../components/SEO";
+import { createServiceSchema } from "../components/schemas";
 
 const implementationProcess = [
   {
@@ -89,8 +91,21 @@ export default function ImplementationServices() {
     return null;
   };
   const navigate = useNavigate();
+  const serviceSchema = createServiceSchema({
+  serviceName: "Dynamics 365 F&O Implementation Services",
+  description: "End-to-end Dynamics 365 Finance and Operations implementation services in India — project management, analysis, configuration, data migration, testing, and training.",
+  serviceType: "ERP Implementation",
+  path: "/services/implementation",
+});
   return (
     <div>
+      <SEO
+  title="Dynamics 365 F&O Implementation Services India | Impacgo"
+  description="End-to-end Dynamics 365 Finance and Operations implementation services in India. Project management, analysis, configuration, data migration, testing, training, and support."
+  keywords="D365FO implementation services India, Dynamics 365 implementation India, ERP implementation India, D365 F&O deployment India"
+  path="/services/implementation"
+  schema={serviceSchema}
+/>
     <ScrollToTop />
     <POSHeader />
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">

@@ -20,7 +20,7 @@ export default function POSHeader() {
       <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >

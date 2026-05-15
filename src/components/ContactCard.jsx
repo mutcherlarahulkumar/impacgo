@@ -6,7 +6,7 @@ const ContactCard = () => {
     <div className=" text-center p-1 mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-10">
       <div className="p-6">
         <h2 className="text-2xl font-semibold text-gray-800">IMPACGO SOLUTIONS</h2>
-        <p className="mt-2 text-gray-600">srikar@impacgo.com</p>
+        <p className="mt-2 text-gray-600">info@impacgo.com</p>
         <p className="text-gray-600">+91-9866323418</p>
         <p className="mt-2 text-gray-600">No 9-29-19, Gupta Villa, Third Floor, Balaji Nagar</p>
         <p className="text-gray-600">Visakhapatnam - 530003</p>

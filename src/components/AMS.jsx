@@ -6,6 +6,8 @@ import POSHeader from '../components/POSHeader';
 import ams from "../assets/ams.jpg";
 import ContactCard from "../components/ContactCard";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
+import { createServiceSchema } from "../components/schemas";
 const amsOfferings = [
   {
     title: "Application Monitoring",
@@ -94,8 +96,21 @@ export default function AMS() {
   
     return null;
   };
+  const serviceSchema = createServiceSchema({
+  serviceName: "Application Management Services (AMS)",
+  description: "24/7 Application Management Services for Dynamics 365 and enterprise applications in India. Monitoring, support, performance optimisation, security, and ongoing enhancements.",
+  serviceType: "Application Management",
+  path: "/services/ams",
+});
   return (
     <div>
+      <SEO
+  title="Application Management Services (AMS) India | D365FO Support | Impacgo"
+  description="24/7 Application Management Services in India for Dynamics 365, enterprise apps, and ERP systems. Performance monitoring, incident management, security, and continuous enhancements."
+  keywords="application management services India, AMS India, D365FO support India, ERP managed services India, application support partner India"
+  path="/services/ams"
+  schema={serviceSchema}
+/>
     <ScrollToTop />
     <POSHeader />
 

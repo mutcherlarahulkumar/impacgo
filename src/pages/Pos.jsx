@@ -1,3 +1,4 @@
+
 import { FaCheckCircle, FaCloud, FaCode, FaCog, FaSyncAlt, FaShieldAlt, FaChartLine } from 'react-icons/fa';
 import POSHeroSection from '../components/POSHeroSection';
 import Footer from '../components/Footer';
@@ -7,7 +8,8 @@ import POSHeader from '../components/POSHeader';
 import maintain from "../assets/maintain.jpg";
 import posimg from "../assets/posimg.jpg"
 import ContactCard from "../components/ContactCard";
-
+import SEO from "../components/SEO";
+import { createServiceSchema, createFaqSchema, createBreadcrumbSchema } from "../components/schemas";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -20,8 +22,44 @@ const ScrollToTop = () => {
 };
 
 export default function Component() {
+  const faqs = [
+  {
+    question: "What POS solutions does Impacgo provide?",
+    answer: "Impacgo builds custom POS solutions for retail businesses including end-to-end POS application development, business process design, ERP-integrated POS systems, POS migration from legacy systems, and ongoing AMS support.",
+  },
+  {
+    question: "Can your POS integrate with ERP and inventory systems?",
+    answer: "Yes, all our POS solutions integrate seamlessly with Microsoft Dynamics 365, ERPNext, and other ERP systems for real-time inventory, sales, customer, and financial data sync across retail operations.",
+  },
+  {
+    question: "Do you support multi-store and omnichannel retail?",
+    answer: "Yes, our POS solutions support multi-store operations, omnichannel retail with online integration, cloud-based central reporting, and consistent customer experience across physical and digital channels.",
+  },
+];
+
+const serviceSchema = createServiceSchema({
+  serviceName: "POS Solutions",
+  description: "Custom POS solutions for retail businesses in India. End-to-end development, ERP integration, and migration services for omnichannel retail operations.",
+  serviceType: "POS Software",
+  path: "/services/pos",
+});
+
+const faqSchema = createFaqSchema(faqs);
+
+const breadcrumbSchema = createBreadcrumbSchema([
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "POS Solutions", path: "/services/pos" },
+]);
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
+      <SEO
+  title="Custom POS Solutions for Retail India | ERP-Integrated POS | Impacgo"
+  description="Custom POS solutions for retail businesses in India. Cloud-based POS development, ERP integration, multi-store support, and omnichannel retail solutions with managed services."
+  keywords="POS solutions India, custom POS development India, retail POS India, ERP POS integration India, cloud POS India, omnichannel retail India, POS migration India"
+  path="/services/pos"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
     <ScrollToTop />
       <POSHeader />
 
