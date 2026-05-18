@@ -53,7 +53,7 @@ import financial from "../assets/financialimg.jpg";
 import health from "../assets/healthcare.jpg";
 import resonac from "../assets/clients/Resonac.webp";
 import hitechi from "../assets/clients/hitechi.webp";
-import ironingboy from "../assets/clients/ironingboy.webp";
+import ironingboy from "../assets/clients/ironingboy.webp";   
 
 export default function HomePage() {
   return (

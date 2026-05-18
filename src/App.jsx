@@ -19,7 +19,7 @@ import AIAutomation from './pages/Aiautomation';
 import DairyFarm from './pages/Dairyfarm';
 import WorkTask from './pages/Worktask';
 import ConstructionPlanner from './pages/Constructionplanner';
-import AXMigration from "./components/AXMigration";
+import AXMigration from "./components/Axmigration";
 
 function App() {
   return (
