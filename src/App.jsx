@@ -20,10 +20,18 @@ import DairyFarm from './pages/Dairyfarm';
 import WorkTask from './pages/Worktask';
 import ConstructionPlanner from './pages/Constructionplanner';
 import AXMigration from "./pages/Axmigration";
+
 // Blog
 import BlogIndex from "./pages/blog/BlogIndex";
 import AX2012EndOfSupport2028Blog from "./pages/blog/AX2012EndOfSupport2028Blog";
+
+// Power Platform cluster (4 pages)
 import PowerApps from "./pages/Powerapps";
+import PowerAutomate from "./pages/PowerAutomate";
+import PowerBI from "./pages/Powerbi";
+import AIBuilder from "./pages/Aibuilder";  
+import D365Manufacturing from "./pages/D365manufacturing";
+import D365Distribution from "./pages/D365distribution";
 
 function App() {
   return (
@@ -47,20 +55,32 @@ function App() {
         <Route path="/services/consulting" element={<Consulting />} />
         <Route path="/services/ai-automation" element={<AIAutomation />} />
 
-        {/* New product pages from PPT */}
+        {/* AX Migration */}
+        <Route path="/services/ax-migration" element={<AXMigration />} />
+
+        {/* Power Platform cluster */}
+        <Route path="/services/power-apps" element={<PowerApps />} />
+        <Route path="/services/power-automate" element={<PowerAutomate />} />
+        <Route path="/services/power-bi" element={<PowerBI />} />
+        <Route path="/services/ai-builder" element={<AIBuilder />} />
+
+        {/* Product pages */}
         <Route path="/products/dairy-farm" element={<DairyFarm />} />
         <Route path="/products/work-task" element={<WorkTask />} />
         <Route path="/products/construction-planner" element={<ConstructionPlanner />} />
-        <Route path="/services/ax-migration" element={<AXMigration />} />
+
+        {/* Blog */}
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/ax-2012-end-of-support-2028-india" element={<AX2012EndOfSupport2028Blog />} />
+
         {/* Contact */}
         <Route path="/contact" element={<ContactUs />} />
-        {/* Blog */}
-<Route path="/blog" element={<BlogIndex />} />
-<Route path="/blog/ax-2012-end-of-support-2028-india" element={<AX2012EndOfSupport2028Blog />} />
-{/* Power Apps Development */}
-<Route path="/services/power-apps" element={<PowerApps />} />
+
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Industry pages (vertical) */}
+        <Route path="/industries/manufacturing" element={<D365Manufacturing />} />
+        <Route path="/industries/distribution" element={<D365Distribution />} />
       </Routes>
     </BrowserRouter>
   )

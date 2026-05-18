@@ -15,7 +15,7 @@ import Footer from "./Footer";
 import POSHeader from "./POSHeader";
 import SEO from "../components/SEO";
 
-// 🔑 PASTE YOUR WEB3FORMS ACCESS KEY HERE (after signing up at https://web3forms.com/)
+
 const WEB3FORMS_ACCESS_KEY = "70949111-6e73-4de6-8dee-c571c73dee66";
 
 export default function ContactSection() {

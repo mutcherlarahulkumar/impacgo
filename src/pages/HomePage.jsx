@@ -42,6 +42,8 @@ import {
   ClipboardList,
   Building2,
   AlertTriangle,
+  BarChart3,
+  Sparkles,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -169,31 +171,45 @@ function HeroSection() {
 
 /* ---------------------- INDUSTRIES ---------------------- */
 function IndustriesSection() {
+  const navigate = useNavigate();
+
   const industries = [
-    "Manufacturing",
-    "Trading & Distribution",
-    "Retail & E-Commerce",
-    "Healthcare",
-    "Financial Services",
-    "Technology & Consulting",
-  ];
-
-  const imgIndustries = [
-    manufacturingImage,
-    supplyChain,
-    retail,
-    health,
-    financial,
-    manufacturingImage,
-  ];
-
-  const descriptions = [
-    "Production optimization, supply chain management, and ERP-driven manufacturing excellence.",
-    "Multi-site trading operations, inventory control, and ERP-integrated distribution networks.",
-    "Omnichannel retail solutions with POS, ERP, and customer experience optimization.",
-    "Patient management, compliance-driven ERP solutions, and healthcare process automation.",
-    "Risk management, financial operations, compliance, and intelligent financial reporting.",
-    "Digital transformation, ERP consulting, and innovation-led enterprise solutions.",
+    {
+      name: "Manufacturing",
+      description: "Production optimization, supply chain management, and ERP-driven manufacturing excellence.",
+      image: manufacturingImage,
+      path: "/industries/manufacturing", // ← Clickable!
+    },
+    {
+      name: "Trading & Distribution",
+      description: "Multi-site trading operations, inventory control, and ERP-integrated distribution networks.",
+      image: supplyChain,
+      path: "/industries/distribution", // No page yet
+    },
+    {
+      name: "Retail & E-Commerce",
+      description: "Omnichannel retail solutions with POS, ERP, and customer experience optimization.",
+      image: retail,
+      path: null,
+    },
+    {
+      name: "Healthcare",
+      description: "Patient management, compliance-driven ERP solutions, and healthcare process automation.",
+      image: health,
+      path: null,
+    },
+    {
+      name: "Financial Services",
+      description: "Risk management, financial operations, compliance, and intelligent financial reporting.",
+      image: financial,
+      path: null,
+    },
+    {
+      name: "Technology & Consulting",
+      description: "Digital transformation, ERP consulting, and innovation-led enterprise solutions.",
+      image: manufacturingImage,
+      path: null,
+    },
   ];
 
   return (
@@ -208,21 +224,31 @@ function IndustriesSection() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
+          {industries.map((industry) => (
             <div
-              key={industry}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105"
+              key={industry.name}
+              onClick={() => industry.path && navigate(industry.path)}
+              className={`bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 ${
+                industry.path ? "cursor-pointer" : ""
+              }`}
             >
               <div className="relative h-48">
                 <img
-                  src={imgIndustries[index]}
-                  alt={industry}
+                  src={industry.image}
+                  alt={industry.name}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{industry}</h3>
-                <p className="text-gray-600">{descriptions[index]}</p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {industry.name}
+                </h3>
+                <p className="text-gray-600">{industry.description}</p>
+                {industry.path && (
+                  <p className="text-blue-600 text-sm font-medium mt-3">
+                    Learn more →
+                  </p>
+                )}
               </div>
             </div>
           ))}
@@ -252,6 +278,24 @@ function ServicesSection() {
     title: "Power Apps Development",
     description: "Custom canvas & model-driven apps connected to D365FO — delivered in 4-8 weeks",
     path: "/services/power-apps",
+  },
+  {
+    icon: Workflow,
+    title: "Power Automate Consulting",
+    description: "Approval workflows, document automation & RPA — connecting D365, M365, and 500+ systems",
+    path: "/services/power-automate",
+  },
+  {
+    icon: BarChart3,
+    title: "Power BI Implementation",
+    description: "Live dashboards on D365FO — replace Excel month-end reports with real-time analytics",
+    path: "/services/power-bi",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Builder Integration",
+    description: "Invoice OCR, prediction models & sentiment AI embedded into your Power Platform workflows",
+    path: "/services/ai-builder",
   },
     {
       icon: Code2,
@@ -1100,7 +1144,6 @@ function ContactSection() {
       setStatus("An error occurred. Please try again.");
     }
   };
-
   return (
     <section id="contact" className="py-20 bg-blue-50">
       <div className="container mx-auto px-4">
