@@ -30,12 +30,12 @@ import AX2012EndOfSupport2028Blog from "./pages/blog/AX2012EndOfSupport2028Blog"
 // Power Platform
 import PowerApps from "./pages/Powerapps";
 import PowerAutomate from "./pages/PowerAutomate";
-import PowerBI from "./pages/Powerbi";
-import AIBuilder from "./pages/Aibuilder";
+import PowerBI from "./pages/PowerBI";
+import AIBuilder from "./pages/AIBuilder";
 
 // Industry Pages
-import D365Manufacturing from "./pages/D365manufacturing";
-import D365Distribution from "./pages/D365distribution";
+import D365Manufacturing from "./pages/D365Manufacturing";
+import D365Distribution from "./pages/D365Distribution";
 
 function App() {
   return (

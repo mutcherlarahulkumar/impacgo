@@ -19,7 +19,7 @@ import { Sparkles } from "lucide-react";
 import POSHeader from "../components/POSHeader";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
-import AIBuilderHeroSection from "../components/Aibuilderherosection";
+import AIBuilderHeroSection from "../components/AIBuilderHeroSection";
 import SEO from "../components/SEO";
 import {
   createServiceSchema,
