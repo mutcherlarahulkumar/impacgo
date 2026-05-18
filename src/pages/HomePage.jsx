@@ -41,6 +41,7 @@ import {
   Tractor,
   ClipboardList,
   Building2,
+  AlertTriangle,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -239,6 +240,14 @@ function ServicesSection() {
 
   const services = [
     {
+      icon: AlertTriangle,
+      title: "AX 2012 → D365 Migration",
+      description:
+        "Migrate before the January 2028 Microsoft deadline — board-mandated upgrade for AX 2012 users",
+      path: "/services/ax-migration",
+      highlight: true,
+    },
+    {
       icon: Code2,
       title: "Application Development",
       description: "Mobile & Web Apps built for scale and performance",
@@ -308,52 +317,79 @@ function ServicesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.title}
-                role="button"
-                tabIndex={0}
-                aria-label={`Learn more about ${service.title}`}
-                onClick={() => navigate(service.path)}
-                onKeyDown={(e) => handleKeyDown(e, service.path)}
-                className="group bg-white rounded-xl shadow-md p-6 cursor-pointer hover:shadow-xl hover:-translate-y-1 hover:border-blue-500 transition-all duration-300 border-2 border-transparent flex flex-col items-center text-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                {/* Icon — centered */}
-                <div className="w-14 h-14 rounded-full bg-blue-100 group-hover:bg-blue-600 flex items-center justify-center mb-4 transition-colors duration-300">
-                  <Icon className="h-7 w-7 text-blue-600 group-hover:text-white transition-colors duration-300" />
-                </div>
+  const Icon = service.icon;
+  return (
+    <div
+      key={service.title}
+      role="button"
+      tabIndex={0}
+      aria-label={`Learn more about ${service.title}`}
+      onClick={() => navigate(service.path)}
+      onKeyDown={(e) => handleKeyDown(e, service.path)}
+      className={`group rounded-xl shadow-md p-6 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 flex flex-col items-center text-center focus:outline-none focus:ring-2 focus:ring-offset-2 relative ${
+        service.highlight
+          ? "bg-gradient-to-br from-red-50 to-orange-50 border-red-400 hover:border-red-600 focus:ring-red-500"
+          : "bg-white border-transparent hover:border-blue-500 focus:ring-blue-500"
+      }`}
+    >
+      {/* Urgent badge for AX migration card */}
+      {service.highlight && (
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+          ⚡ Urgent
+        </span>
+      )}
 
-                {/* Title — centered */}
-                <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                  {service.title}
-                </h3>
+      {/* Icon — centered */}
+      <div
+        className={`w-14 h-14 rounded-full flex items-center justify-center mb-4 transition-colors duration-300 ${
+          service.highlight
+            ? "bg-red-100 group-hover:bg-red-600"
+            : "bg-blue-100 group-hover:bg-blue-600"
+        }`}
+      >
+        <Icon
+          className={`h-7 w-7 transition-colors duration-300 ${
+            service.highlight
+              ? "text-red-600 group-hover:text-white"
+              : "text-blue-600 group-hover:text-white"
+          }`}
+        />
+      </div>
 
-                {/* Description — centered */}
-                <p className="text-sm text-gray-600 mb-4 flex-1">
-                  {service.description}
-                </p>
+      {/* Title — centered */}
+      <h3 className="text-lg font-semibold mb-2 text-gray-800">
+        {service.title}
+      </h3>
 
-                {/* Click affordance — centered */}
-                <div className="flex items-center justify-center text-sm font-medium text-blue-600 mt-auto">
-                  <span>Learn more</span>
-                  <svg
-                    className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              </div>
-            );
-          })}
+      {/* Description — centered */}
+      <p className="text-sm text-gray-600 mb-4 flex-1">
+        {service.description}
+      </p>
+
+      {/* Click affordance — centered */}
+      <div
+        className={`flex items-center justify-center text-sm font-medium mt-auto ${
+          service.highlight ? "text-red-600" : "text-blue-600"
+        }`}
+      >
+        <span>Learn more</span>
+        <svg
+          className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+})}
         </div>
       </div>
     </section>

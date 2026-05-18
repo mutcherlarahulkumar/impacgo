@@ -6,10 +6,11 @@ import {
   FaEye,
   FaChartLine,
   FaDatabase,
-  FaUsers,
+  FaUsers, 
   FaRocket,
   FaShieldAlt,
   FaSearch,
+   
   FaProjectDiagram,
   FaCogs,
   FaTools,

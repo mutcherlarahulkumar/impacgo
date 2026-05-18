@@ -19,6 +19,7 @@ import AIAutomation from './pages/Aiautomation';
 import DairyFarm from './pages/Dairyfarm';
 import WorkTask from './pages/Worktask';
 import ConstructionPlanner from './pages/Constructionplanner';
+import AXMigration from "./components/AXMigration";
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
         <Route path="/products/dairy-farm" element={<DairyFarm />} />
         <Route path="/products/work-task" element={<WorkTask />} />
         <Route path="/products/construction-planner" element={<ConstructionPlanner />} />
-
+        <Route path="/services/ax-migration" element={<AXMigration />} />
         {/* Contact */}
         <Route path="/contact" element={<ContactUs />} />
 
