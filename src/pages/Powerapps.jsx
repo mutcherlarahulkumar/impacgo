@@ -19,7 +19,7 @@ import { Zap } from "lucide-react";
 import POSHeader from "../components/POSHeader";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
-import PowerAppsHeroSection from "../components/PowerAppsHeroSection";
+import PowerAppsHeroSection from "../components/Powerappsherosection";
 import SEO from "../components/SEO";
 import {
   createServiceSchema,
