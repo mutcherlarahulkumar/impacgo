@@ -9,7 +9,7 @@ import AMS from "../components/AMS";
 import D365HeroSection from "../components/D365HeroSection";
 import { FaChartPie, FaRobot, FaSyncAlt, FaExpand, FaDollarSign, FaCog, FaClipboardCheck, FaChartLine , FaBalanceScale } from "react-icons/fa";
 import ContactCard from "../components/ContactCard"
-import ServiceSection from "../components/ServiceSection";
+import ServiceSection from "./ServiceSection";
 import SEO from "../components/SEO";
 import { createServiceSchema, createFaqSchema, createBreadcrumbSchema } from "../components/schemas";
 

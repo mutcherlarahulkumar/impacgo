@@ -19,7 +19,7 @@ import { AlertTriangle } from "lucide-react";
 import POSHeader from "../components/POSHeader";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
-import AXMigrationHeroSection from "../components/AXMigrationHeroSection";
+import AXMigrationHeroSection from "../components/Axmigrationherosection";
 import SEO from "../components/SEO";
 import {
   createServiceSchema,
