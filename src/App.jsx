@@ -20,6 +20,11 @@ import DairyFarm from './pages/Dairyfarm';
 import WorkTask from './pages/Worktask';
 import ConstructionPlanner from './pages/Constructionplanner';
 import AXMigration from "./pages/Axmigration";
+// Blog
+import BlogIndex from "./pages/blog/BlogIndex";
+import AX2012EndOfSupport2028Blog from "./pages/blog/AX2012EndOfSupport2028Blog";
+import PowerApps from "./pages/Powerapps";
+
 function App() {
   return (
     <BrowserRouter>
@@ -49,7 +54,11 @@ function App() {
         <Route path="/services/ax-migration" element={<AXMigration />} />
         {/* Contact */}
         <Route path="/contact" element={<ContactUs />} />
-
+        {/* Blog */}
+<Route path="/blog" element={<BlogIndex />} />
+<Route path="/blog/ax-2012-end-of-support-2028-india" element={<AX2012EndOfSupport2028Blog />} />
+{/* Power Apps Development */}
+<Route path="/services/power-apps" element={<PowerApps />} />
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

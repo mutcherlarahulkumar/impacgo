@@ -248,6 +248,12 @@ function ServicesSection() {
       highlight: true,
     },
     {
+    icon: Smartphone,
+    title: "Power Apps Development",
+    description: "Custom canvas & model-driven apps connected to D365FO — delivered in 4-8 weeks",
+    path: "/services/power-apps",
+  },
+    {
       icon: Code2,
       title: "Application Development",
       description: "Mobile & Web Apps built for scale and performance",
