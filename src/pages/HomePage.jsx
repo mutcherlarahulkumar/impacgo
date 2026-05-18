@@ -10,11 +10,13 @@ import worktast from "../assets/worktask.jpg";
 import construction from "../assets/Construction.jpg";
 import SEO from "../components/SEO";
 import { organizationSchema, localBusinessSchema } from "../components/schemas";
+import emailjs from "@emailjs/browser";
 import {
   ChevronDown,
   CheckCircle,
   Mail,
   User,
+  Phone,
   MessageSquare,
   Code2,
   Plug,
@@ -1110,106 +1112,206 @@ function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
+
   const [status, setStatus] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+
+    setStatus("sending");
+    setErrorMessage("");
 
     try {
-      const response = await fetch("https://api.staticforms.xyz/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          accessKey: "85f6cfac-d627-4ba5-ad1d-aaa77e5c7ebd",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }),
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || "Not Provided",
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      };
+
+      const response = await emailjs.send(
+        "service_d7y8ehi",
+        "template_yadp6j3",
+        templateParams,
+        "IFgEgXdtrHt3Am0eV"
+      );
+
+      console.log("SUCCESS!", response.status, response.text);
+
+      setStatus("success");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
       });
 
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("Failed to send message. Please try again.");
-      }
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+
     } catch (error) {
-      setStatus("An error occurred. Please try again.");
+      console.error("FAILED...", error);
+
+      setStatus("error");
+
+      setErrorMessage(
+        "Failed to send message. Please try again."
+      );
     }
   };
+
   return (
     <section id="contact" className="py-20 bg-blue-50">
       <div className="container mx-auto px-4">
+
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-600">
             Let's Build Something Impactful. Together.
           </h2>
-          {/* <p className="text-lg text-gray-600">
-            🌐 www.impacgo.com &nbsp; · &nbsp; 📧 info@impacgo.com
-          </p> */}
         </div>
 
         <form
           className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg"
           onSubmit={handleSubmit}
         >
+
+          {/* Name */}
           <div className="mb-6">
             <label className="flex items-center mb-2 text-gray-700">
-              <User className="mr-2 text-blue-600" /> Name
+              <User className="mr-2 text-blue-600" />
+              Name
             </label>
+
             <input
               type="text"
               name="name"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
               placeholder="Enter your name"
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={status === "sending"}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
+          {/* Email */}
           <div className="mb-6">
             <label className="flex items-center mb-2 text-gray-700">
-              <Mail className="mr-2 text-blue-600" /> Email
+              <Mail className="mr-2 text-blue-600" />
+              Email
             </label>
+
             <input
               type="email"
               name="email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={status === "sending"}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+
+          {/* Phone */}
           <div className="mb-6">
             <label className="flex items-center mb-2 text-gray-700">
-              <MessageSquare className="mr-2 text-blue-600" /> Message
+              <Phone className="mr-2 text-blue-600" />
+              Phone
             </label>
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter your phone number"
+              value={formData.phone}
+              onChange={handleChange}
+              disabled={status === "sending"}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          {/* Message */}
+          <div className="mb-6">
+            <label className="flex items-center mb-2 text-gray-700">
+              <MessageSquare className="mr-2 text-blue-600" />
+              Message
+            </label>
+
             <textarea
               name="message"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
               rows="4"
               placeholder="Write your message here..."
               value={formData.message}
               onChange={handleChange}
               required
-            ></textarea>
+              disabled={status === "sending"}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
+
+          {/* Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md transform hover:scale-105"
+            disabled={status === "sending"}
+            className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition"
           >
-            Send Message
+            {status === "sending"
+              ? "Sending..."
+              : "Send Message"}
           </button>
-          {status && (
-            <p className="mt-4 text-center text-gray-700">{status}</p>
+
+          {/* Success Message */}
+{status === "success" && (
+  <div className="mt-6 bg-green-50 border border-green-200 rounded-2xl p-5 shadow-sm animate-fade-in">
+    
+    <div className="flex items-start">
+      
+      {/* Icon */}
+      <div className="flex-shrink-0">
+        <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+          <CheckCircle className="text-green-600 w-7 h-7" />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="ml-4">
+        <h3 className="text-lg font-semibold text-green-800">
+          Message Sent Successfully 🚀
+        </h3>
+
+        <p className="text-sm text-green-700 mt-1 leading-relaxed">
+          Thank you for contacting Impacgo Solutions.
+          Our team has received your message and we’ll connect with you shortly.
+        </p>
+
+        <p className="text-xs text-green-600 mt-3">
+          Typically responds within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+)}
+
+          {/* Error */}
+          {status === "error" && (
+            <p className="mt-4 text-center text-red-600 font-medium">
+              {errorMessage}
+            </p>
           )}
         </form>
       </div>
