@@ -64,12 +64,12 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Impacgo Solutions | Microsoft Dynamics 365 & Power Platform Partner India"
-        description="Visakhapatnam-based Microsoft Dynamics 365 Finance & Operations (D365FO) implementation partner. Expert in AX 2012 to D365 migration, Power Apps, Power Automate, Power BI, ERPNext, MES, and AI Automation for manufacturing, distribution, and enterprise clients across India."
-        keywords="Microsoft Dynamics 365 partner India, D365FO implementation India, AX 2012 to D365 migration, Power Platform consulting India, Power BI implementation India, Dynamics 365 CRM India, Microsoft AI Builder India, ERPNext implementation India, MES manufacturing India, Impacgo Solutions Visakhapatnam"
-        path="/"
-        schema={[organizationSchema, localBusinessSchema]}
-      />
+  title="Microsoft Dynamics 365 & Power Platform Partner | Global D365FO Specialists | Impacgo"
+  description="Specialist Microsoft Dynamics 365 Finance & Operations and Power Platform implementation partner for global enterprises. AX 2012 migration, D365FO, Power Apps, Power BI, AI Builder. Deep India compliance expertise (GST, e-invoicing). Multi-country rollouts. Free consultation."
+  keywords="Microsoft Dynamics 365 partner, D365FO implementation partner, Power Platform consultant, AX 2012 migration specialist, Power Apps developer, Power BI implementation, AI Builder integration, Dynamics 365 CRM partner, Microsoft Dynamics 365 India, D365 partner India, Power Platform India, ERP partner India"
+  path="/"
+  schema={[organizationSchema, localBusinessSchema]}
+/>
       <Header />
       <main>
         <HeroSection />
@@ -222,8 +222,7 @@ function IndustriesSection() {
           Industries We Serve
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-          Impacgo Solutions delivers industry-specific ERP, automation, and
-          digital transformation solutions across global enterprises.
+          Impacgo Solutions delivers industry-specific ERP, automation, and digital transformation solutions for global enterprises — with deep India compliance expertise built in.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

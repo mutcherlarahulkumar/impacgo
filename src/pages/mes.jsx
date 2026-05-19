@@ -183,9 +183,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="MES Implementation Partner India | Manufacturing Execution System | Impacgo"
-  description="Specialist MES implementation partner in India for manufacturers. Real-time shop floor monitoring, OEE tracking, quality control, and ERP-integrated manufacturing execution systems."
-  keywords="MES implementation India, Manufacturing Execution System India, shop floor monitoring India, OEE tracking India, MES consultant India, manufacturing software India, MES Visakhapatnam"
+  title="Manufacturing Execution Systems (MES) Implementation | D365FO Integration | Global Specialists"
+  description="Specialist MES implementation and D365FO integration services worldwide. Shop floor data capture, production tracking, quality management, and OEE dashboards. Integration with Wonderware, Rockwell, Siemens MES, and custom platforms. India and global manufacturers."
+  keywords="MES implementation, manufacturing execution systems, MES D365FO integration, shop floor data capture, OEE dashboard, MES consultant, Wonderware integration, Rockwell MES integration, MES India, MES partner global, smart factory implementation"
   path="/services/mes"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

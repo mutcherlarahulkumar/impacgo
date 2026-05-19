@@ -205,12 +205,12 @@ export default function D365Distribution() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="D365 for Distribution India | WMS · Trade Agreements · Multi-Warehouse | Impacgo"
-        description="Microsoft Dynamics 365 Finance & Operations implementation for Indian distributors and wholesalers. Advanced warehouse management, trade agreements, multi-location inventory, B2B portals, and Indian GST/TDS/e-way bill compliance. Free discovery workshop."
-        keywords="D365 Distribution India, Dynamics 365 wholesale India, Microsoft ERP for distribution India, D365FO WMS India, D365 trading company India, Distribution ERP partner India, D365 multi-warehouse India, B2B distribution ERP India, D365 trade agreements India, Distribution ERP Visakhapatnam, wholesale distribution Microsoft Dynamics India"
-        path="/industries/distribution"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="D365 for Distribution | WMS · Trade Agreements · Multi-Warehouse | Global Specialists"
+  description="Microsoft Dynamics 365 Finance & Operations implementation for global distributors and wholesalers. Advanced warehouse management, trade agreements, multi-location inventory, B2B portals, and India GST/TDS/e-way bill compliance. Free discovery workshop."
+  keywords="D365 Distribution, Dynamics 365 wholesale, Microsoft ERP for distribution, D365FO WMS, D365 trading company, Distribution ERP partner, D365 multi-warehouse, B2B distribution ERP, D365 trade agreements, wholesale distribution Microsoft Dynamics, D365 Distribution India, Distribution ERP India"
+  path="/industries/distribution"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

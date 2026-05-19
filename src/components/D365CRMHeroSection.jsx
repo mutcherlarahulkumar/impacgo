@@ -43,7 +43,7 @@ export default function D365CRMHeroSection() {
               <span className="bg-gradient-to-r from-pink-200 to-violet-200 bg-clip-text text-transparent">
                 CRM
               </span>{" "}
-              Implementation — India
+              Implementation — Global Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-pink-100 mb-8 leading-relaxed max-w-xl">

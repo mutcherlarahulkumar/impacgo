@@ -33,12 +33,12 @@ export default function BlogIndex() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="Microsoft Dynamics 365 & Power Platform Insights | Impacgo Blog"
-        description="Expert articles on Microsoft Dynamics 365 F&O, AX 2012 migration, Power Platform, ERPNext, and digital transformation for Indian enterprises. Implementation guides, migration timelines, and Microsoft ecosystem insights from Impacgo Solutions."
-        keywords="Microsoft Dynamics 365 blog India, D365FO implementation guide, AX 2012 migration India blog, Power Platform articles, ERP migration insights India, Impacgo blog"
-        path="/blog"
-        schema={breadcrumbSchema}
-      />
+  title="Impacgo Blog | Microsoft Dynamics 365 & Power Platform Insights"
+  description="Expert articles on Microsoft Dynamics 365, AX 2012 migration, Power Platform, Power BI, and digital transformation for global enterprises. Microsoft partner insights from Impacgo."
+  keywords="Microsoft Dynamics 365 blog, AX 2012 migration blog, Power Platform blog, D365FO insights, Microsoft partner blog, ERP blog India, Dynamics 365 articles"
+  path="/blog"
+  schema={[breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

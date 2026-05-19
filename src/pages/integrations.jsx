@@ -184,9 +184,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="System Integration Services India | API, EDI, ERP Integrations | Impacgo"
-  description="Enterprise system integration services in India. REST API integrations, EDI pipelines, third-party SaaS connections, Azure middleware, and Microsoft Dynamics 365 integrations."
-  keywords="system integration services India, API integration India, EDI integration India, ERP integration India, Azure Logic Apps India, middleware integration India, D365 integration partner"
+  title="Microsoft Dynamics Integration Services | D365FO + Third-Party Systems | Global Specialists"
+  description="Specialist Microsoft Dynamics 365 integration services worldwide. Connect D365FO with CRM, e-commerce, MES, banking, logistics, and custom systems via Azure Logic Apps, Service Bus, OData, and REST APIs. India and global enterprises."
+  keywords="Dynamics 365 integration, D365FO integration partner, Microsoft Dynamics integration consultant, Azure Logic Apps integration, D365 OData integration, D365 REST API, ERP integration partner, D365 middleware, integration India, integration global"
   path="/services/integrations"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

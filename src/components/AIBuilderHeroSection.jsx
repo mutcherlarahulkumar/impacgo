@@ -47,7 +47,7 @@ export default function AIBuilderHeroSection() {
               <span className="bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">
                 Integration Partner
               </span>{" "}
-              — India
+              — Global Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-violet-100 mb-8 leading-relaxed max-w-xl">

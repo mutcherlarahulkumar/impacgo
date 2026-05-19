@@ -128,11 +128,11 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="Work Task App | Consultant Time Tracking & Timesheet Software India | Impacgo"
-  description="Project-based time tracking and timesheet software for consultants and professional services firms in India. Track projects, tasks, utilisation, billable hours, and manage approvals."
-  keywords="time tracking software India, consultant timesheet software India, project management software India, billable hours tracking India, professional services automation India, timesheet app India"
+  title="Work Task Management App | Field Service Mobile App | Global"
+  description="Mobile work task management app for field service teams worldwide. Task assignment, real-time tracking, photo capture, and reporting. India and global field service operations."
+  keywords="work task management app, field service app, task management mobile, field service software India, work order management, mobile task app global"
   path="/products/work-task"
-  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+  schema={[productSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />

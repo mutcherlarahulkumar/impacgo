@@ -184,9 +184,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="AI & Automation Solutions Company India | RPA, AI Chatbots, Predictive Analytics | Impacgo"
-  description="AI and intelligent automation services in India. RPA, AI chatbots, predictive analytics, computer vision, and Microsoft AI Builder integration for enterprises. Embed AI into your ERP and business workflows."
-  keywords="AI automation company India, RPA implementation India, AI chatbots India, predictive analytics India, computer vision India, Microsoft AI Builder India, business process automation India, AI consulting Visakhapatnam"
+  title="AI & Automation Consulting | Microsoft AI Builder · Power Automate · RPA | Global Specialists"
+  description="Specialist AI and automation consulting services worldwide. Microsoft AI Builder, Power Automate, RPA, and intelligent document processing. Embedded in Dynamics 365 workflows. India and global enterprises."
+  keywords="AI automation consultant, Microsoft AI consultant, RPA implementation, intelligent automation, business process automation, AI consultant India, AI automation partner global, Power Platform AI, Microsoft Copilot integration"
   path="/services/ai-automation"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

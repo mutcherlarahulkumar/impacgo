@@ -43,7 +43,7 @@ export default function D365RetailHeroSection() {
               <span className="bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent">
                 Retail & Commerce
               </span>{" "}
-              — India
+              — Global Retail Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-orange-100 mb-8 leading-relaxed max-w-xl">

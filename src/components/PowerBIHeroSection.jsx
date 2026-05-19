@@ -47,7 +47,7 @@ export default function PowerBIHeroSection() {
               <span className="bg-gradient-to-r from-amber-200 to-yellow-200 bg-clip-text text-transparent">
                 Implementation Partner
               </span>{" "}
-              — India
+              — Global
             </h1>
 
             <p className="text-lg md:text-xl text-amber-50 mb-8 leading-relaxed max-w-xl">

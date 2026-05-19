@@ -204,12 +204,12 @@ export default function PowerApps() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="Power Apps Development Company India | D365FO Integration | Impacgo"
-        description="Custom Microsoft Power Apps development for Indian enterprises. Canvas apps and model-driven apps connected to Dynamics 365 F&O, Dataverse, and 500+ business systems. Mobile-first, offline-capable, delivered in 4-8 weeks. Free consultation."
-        keywords="Power Apps developer India, Power Apps development company India, Power Apps D365FO India, canvas app developer India, model-driven app India, low code development India, Microsoft Power Platform developer India, Power Apps consultant India, Power Apps Visakhapatnam, Power Apps mobile development India"
-        path="/services/power-apps"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="Power Apps Development Partner | Canvas & Model-Driven Apps | Global Power Platform Specialists"
+  description="Microsoft Power Apps development services worldwide. Custom canvas and model-driven apps connected to Dynamics 365 F&O. Mobile-ready field apps, shop floor solutions, and approval workflows. Delivered in 4-8 weeks. India compliance built in."
+  keywords="Power Apps developer, Power Apps D365FO, canvas app developer, model-driven app developer, Power Apps development partner, Microsoft Power Apps consultant, Power Apps mobile development, Power Apps Microsoft Dynamics, Power Apps developer India, Power Platform development, Power Apps consulting"
+  path="/services/power-apps"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

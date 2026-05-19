@@ -212,12 +212,12 @@ export default function AXMigration() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="AX 2012 to D365FO Migration Partner India | Jan 2028 Deadline | Impacgo"
-        description="Microsoft Dynamics AX 2012 support ends January 2028. Impacgo Solutions — specialist Microsoft partner in India for AX 2012 to D365 Finance and Operations migration. Code upgrade, data migration, reimplementation. Free migration assessment for Indian enterprises."
-        keywords="AX 2012 to D365 migration India, Dynamics AX 2012 upgrade India, Microsoft AX end of life migration, AX 2012 to D365FO migration partner, upgrade Dynamics AX to D365 India, AX 2012 cloud migration India, Dynamics AX support ends 2028, AX migration company Visakhapatnam, D365 Finance Operations migration India, X++ to D365FO extensions"
-        path="/services/ax-migration"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="AX 2012 to D365 Migration Partner | End of Support 2028 | Global Migration Specialists"
+  description="Specialist Microsoft Dynamics AX 2012 to D365 Finance & Operations migration services for global enterprises. Beat the January 2028 end-of-support deadline. Deep India compliance expertise (GST, e-invoicing, TDS). Multi-country rollout experience. Free migration assessment."
+  keywords="AX 2012 migration partner, Dynamics AX to D365 migration, AX 2012 end of support 2028, Dynamics AX 2012 R3 migration, D365FO migration services, AX 2012 to cloud migration, AX 2012 upgrade specialist, Microsoft Dynamics migration partner, AX 2012 migration India, AX 2012 migration consultant India, Dynamics 365 finance operations migration"
+  path="/services/ax-migration"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

@@ -65,9 +65,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-  title="Microsoft Dynamics 365 Finance & Operations Implementation Partner India | Impacgo"
-  description="Specialist Microsoft Dynamics 365 F&O implementation partner in India. End-to-end D365FO ERP deployment, customisation, and managed services for manufacturing, distribution, and enterprise clients across India."
-  keywords="Microsoft Dynamics 365 Finance Operations India, D365FO implementation partner India, Dynamics 365 ERP India, D365 F&O consultant India, Microsoft ERP partner Visakhapatnam, D365FO customisation India"
+  title="Microsoft Dynamics 365 Finance & Operations Implementation Partner | Global D365FO Specialists"
+  description="Specialist Microsoft Dynamics 365 Finance & Operations implementation services for global enterprises. Industry-specific D365FO deployment for manufacturing, distribution, and retail. Deep India compliance expertise (GST, TDS, e-invoicing) ready for multi-country rollouts. Free consultation."
+  keywords="Microsoft Dynamics 365 partner, D365FO implementation partner, Dynamics 365 Finance Operations consultant, D365 F&O implementation services, Microsoft ERP implementation partner, Dynamics 365 implementation specialist, D365FO consulting services, Microsoft Dynamics 365 India, D365FO partner India, enterprise ERP partner, D365 F&O global rollout"
   path="/services/d365"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

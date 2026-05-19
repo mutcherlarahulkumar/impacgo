@@ -47,7 +47,7 @@ export default function D365DistributionHeroSection() {
               <span className="bg-gradient-to-r from-emerald-300 to-cyan-200 bg-clip-text text-transparent">
                 Distribution & Wholesale
               </span>{" "}
-              — India
+              — Global Distribution Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-emerald-100 mb-8 leading-relaxed max-w-xl">

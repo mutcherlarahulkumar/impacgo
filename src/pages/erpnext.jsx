@@ -183,9 +183,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="ERPNext Implementation Partner India | Open Source ERP for SMEs | Impacgo"
-  description="Certified ERPNext implementation partner in India for SMEs and mid-market businesses. Complete open-source ERP covering accounting, CRM, inventory, HR, manufacturing, and e-commerce."
-  keywords="ERPNext implementation India, ERPNext partner India, open source ERP India, SME ERP India, ERPNext customisation, ERPNext Visakhapatnam, Frappe ERPNext consultant India"
+  title="ERPNext Implementation Partner | Open-Source ERP | Global Specialists"
+  description="Specialist ERPNext implementation services worldwide. Open-source ERP for manufacturing, distribution, and services. India compliance (GST, TDS, e-invoicing) built in. Affordable alternative to SAP/Oracle. Free consultation."
+  keywords="ERPNext implementation partner, ERPNext consultant, ERPNext India, ERPNext manufacturing, ERPNext distribution, open source ERP partner, ERPNext customisation, ERPNext development, Frappe consultant, ERPNext global"
   path="/services/erpnext"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

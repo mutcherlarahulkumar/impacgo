@@ -129,11 +129,11 @@ const breadcrumbSchema = createBreadcrumbSchema([
     
     <div>
       <SEO
-  title="Dairy Farm Management System India | Milk Production Tracking Software | Impacgo"
-  description="Complete dairy farm management software for milk production tracking, herd health, breeding, feed management, and farm analytics. Built for modern dairy operations in India — small farms to co-operatives."
-  keywords="dairy farm management software India, milk production tracking software, dairy management system India, herd management software India, dairy farm app India, cow management software India"
+  title="Dairy Farm Management System | Cloud Software for Dairy Operations | Global"
+  description="Cloud-based dairy farm management system for global dairy operations. Cattle tracking, milk production, breeding, health records, and financial reporting. India and global dairy farms."
+  keywords="dairy farm management software, dairy farm system, cattle management software, milk production software, dairy farm cloud, dairy farm India, dairy management global"
   path="/products/dairy-farm"
-  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+  schema={[productSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />

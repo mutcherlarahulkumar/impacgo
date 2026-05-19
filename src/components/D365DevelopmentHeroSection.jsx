@@ -43,7 +43,7 @@ export default function D365DevelopmentHeroSection() {
               <span className="bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent">
                 Development & Customisation
               </span>{" "}
-              — India
+              — Global X++ Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-xl">

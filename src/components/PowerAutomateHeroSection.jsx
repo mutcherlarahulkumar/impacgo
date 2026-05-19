@@ -47,7 +47,7 @@ export default function PowerAutomateHeroSection() {
               <span className="bg-gradient-to-r from-yellow-300 to-cyan-200 bg-clip-text text-transparent">
                 Consulting Partner
               </span>{" "}
-              — India
+              — Global Implementation Partner
             </h1>
 
             <p className="text-lg md:text-xl text-cyan-100 mb-8 leading-relaxed max-w-xl">

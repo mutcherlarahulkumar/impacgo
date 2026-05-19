@@ -86,13 +86,12 @@ export default function AX2012EndOfSupport2028Blog() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <SEO
-        title="AX 2012 End of Support in 2028 — What Every Indian Enterprise Needs to Know | Impacgo"
-        description="Microsoft AX 2012 R3 extended support ends January 2028. Indian enterprises on AX 2012 must plan migration to D365 Finance and Operations now. Migration timelines, three approaches, and why starting the assessment in 2026 is critical."
-        keywords="AX 2012 end of support 2028, AX 2012 extended support India, Microsoft AX 2012 migration deadline, AX 2012 to D365FO migration India, Dynamics AX end of life, AX 2012 R3 support end date, when does AX 2012 support end, AX 2012 migration planning India"
-        path="/blog/ax-2012-end-of-support-2028-india"
-        type="article"
-        schema={[articleSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="AX 2012 End of Support 2028 | Migration Guide for Global Enterprises"
+  description="Microsoft has announced end of support for Dynamics AX 2012 by January 2028. Complete migration guide covering risks, options, timeline, and how to plan your D365 Finance & Operations upgrade. For global enterprises and Indian businesses."
+  keywords="AX 2012 end of support 2028, Dynamics AX 2012 end of life, AX 2012 migration, AX 2012 to D365 migration, Microsoft AX 2028 deadline, AX 2012 R3 end of support, Dynamics AX migration plan, AX 2012 India, AX 2012 global migration"
+  path="/blog/ax-2012-end-of-support-2028-india"
+  schema={[articleSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />
@@ -123,8 +122,7 @@ export default function AX2012EndOfSupport2028Blog() {
             </div>
 
             <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-              AX 2012 End of Support in 2028 — What Every Indian Enterprise
-              Needs to Know Now
+              AX 2012 End of Support in 2028: What Global Enterprises and Indian Businesses Need to Know
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-2">

@@ -47,7 +47,7 @@ export default function PowerAppsHeroSection() {
               <span className="bg-gradient-to-r from-cyan-300 to-purple-200 bg-clip-text text-transparent">
                 Development Partner
               </span>{" "}
-              — India
+              — Global Implementation Partner
             </h1>
 
             <p className="text-lg md:text-xl text-purple-100 mb-8 leading-relaxed max-w-xl">

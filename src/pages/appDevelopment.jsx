@@ -170,9 +170,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div> 
       <SEO
-  title="Web & Mobile App Development Company India | React, Flutter, Power Apps | Impacgo"
-  description="Custom web and mobile application development for enterprises in India. React, Angular, Vue.js, React Native, Flutter, and Microsoft Power Apps integrated with Dynamics 365 and ERP systems."
-  keywords="web application development India, mobile app development India, React developer India, Flutter developer India, Power Apps development India, custom software development Visakhapatnam, enterprise app development India"
+  title="Custom App Development | Web · Mobile · Power Apps | Global Specialists"
+  description="Custom web, mobile, and Power Apps development services worldwide. React, React Native, .NET, and Microsoft Power Platform. India and global enterprises."
+  keywords="custom app development, web app development, mobile app development, Power Apps development, React developer, React Native developer, .NET developer, app development partner India, app development partner global"
   path="/services/app-development"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

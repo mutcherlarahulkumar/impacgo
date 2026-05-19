@@ -183,9 +183,9 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="Digital Transformation Consulting India | ERP, MES, Process Redesign | Impacgo"
-  description="Strategic technology and digital transformation consulting in India. Business process redesign, ERP/MES readiness, technology roadmap, change management, and post go-live hypercare for enterprises."
-  keywords="digital transformation consulting India, ERP consulting India, technology roadmap India, change management India, business process consulting India, MES readiness India, transformation partner Visakhapatnam"
+  title="Microsoft Dynamics & Digital Transformation Consulting | Global Specialists"
+  description="Specialist Microsoft Dynamics 365 and digital transformation consulting worldwide. ERP strategy, technology roadmap, vendor selection, and implementation oversight. India and global enterprises."
+  keywords="Microsoft Dynamics consulting, digital transformation consultant, ERP strategy consultant, technology roadmap, ERP vendor selection, Dynamics 365 consulting India, digital transformation India, Microsoft consultant global"
   path="/services/consulting"
   schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />

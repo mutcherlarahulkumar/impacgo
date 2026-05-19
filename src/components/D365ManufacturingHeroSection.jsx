@@ -47,7 +47,7 @@ export default function D365ManufacturingHeroSection() {
               <span className="bg-gradient-to-r from-amber-300 to-orange-200 bg-clip-text text-transparent">
                 Manufacturing
               </span>{" "}
-              — India
+              — Global Manufacturing Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-xl">

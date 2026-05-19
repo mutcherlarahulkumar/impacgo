@@ -204,12 +204,12 @@ export default function PowerAutomate() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="Power Automate Consulting India | Workflow Automation Partner | Impacgo"
-        description="Microsoft Power Automate consulting in India. Build approval workflows, data sync, document automation, and RPA across Dynamics 365, Microsoft 365, and 500+ business systems. Delivered in 2-6 weeks. Free automation consultation."
-        keywords="Power Automate consultant India, Power Automate consulting company India, Power Automate D365FO India, workflow automation India, approval workflow automation India, RPA India, Microsoft Power Platform consultant India, Power Automate Visakhapatnam, business process automation India, Power Automate Desktop RPA India"
-        path="/services/power-automate"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="Power Automate Consulting Partner | Workflow Automation & RPA | Global Specialists"
+  description="Microsoft Power Automate consulting and implementation services worldwide. Approval workflows, document automation, RPA, and Dynamics 365 process automation. Connecting D365, M365, and 500+ business systems. India compliance built in. 4-8 week delivery."
+  keywords="Power Automate consultant, workflow automation, RPA implementation, Power Automate D365FO, business process automation, Power Automate developer, Microsoft Power Automate partner, Power Automate India, workflow automation India, RPA India, Power Platform automation"
+  path="/services/power-automate"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

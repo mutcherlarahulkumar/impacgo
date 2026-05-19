@@ -105,11 +105,11 @@ export default function AMS() {
   return (
     <div>
       <SEO
-  title="Application Management Services (AMS) India | D365FO Support | Impacgo"
-  description="24/7 Application Management Services in India for Dynamics 365, enterprise apps, and ERP systems. Performance monitoring, incident management, security, and continuous enhancements."
-  keywords="application management services India, AMS India, D365FO support India, ERP managed services India, application support partner India"
+  title="Application Managed Services | Microsoft Dynamics 365 AMS | Global Specialists"
+  description="Specialist Application Managed Services (AMS) for Microsoft Dynamics 365 worldwide. SLA-backed support, minor enhancements, performance tuning, and continuous improvement. India and global enterprises."
+  keywords="Application Managed Services, AMS partner, D365 managed services, Microsoft Dynamics support, ERP managed services, AMS India, AMS global, Dynamics 365 AMS"
   path="/services/ams"
-  schema={serviceSchema}
+  schema={[serviceSchema, breadcrumbSchema]}
 />
     <ScrollToTop />
     <POSHeader />

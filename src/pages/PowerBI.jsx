@@ -204,12 +204,12 @@ export default function PowerBI() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="Power BI Implementation Partner India | D365FO Dashboards | Impacgo"
-        description="Microsoft Power BI implementation services in India. Live dashboards connected to Dynamics 365 F&O, SQL Server, and your data warehouse. Replace Excel reporting with real-time analytics. DAX experts. 4-8 week delivery. Free consultation."
-        keywords="Power BI implementation partner India, Power BI D365FO India, Power BI consultant India, Replace Excel reporting Power BI India, DAX expert India, Power BI dashboard development India, financial reporting Power BI India, Power BI consulting company India, Power BI Visakhapatnam, Microsoft Power BI India"
-        path="/services/power-bi"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="Power BI Implementation Partner | D365FO Dashboards | Global Analytics Specialists"
+  description="Microsoft Power BI implementation services worldwide. Live dashboards connected to Dynamics 365 F&O, SQL Server, and your data warehouse. Replace Excel reporting with real-time analytics. DAX experts. India compliance reporting (GST, financial close) built in. 4-8 week delivery."
+  keywords="Power BI implementation partner, Power BI D365FO, Power BI consultant, replace Excel reporting Power BI, DAX expert, Power BI dashboard development, financial reporting Power BI, Microsoft Power BI partner, Power BI implementation India, Power BI consulting, Power BI Microsoft Dynamics"
+  path="/services/power-bi"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

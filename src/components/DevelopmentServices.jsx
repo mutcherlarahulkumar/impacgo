@@ -97,11 +97,11 @@ export default function DevelopmentServices() {
   return (
     <div>
       <SEO
-  title="Dynamics 365 F&O Development & Customisation India | X++ Developer | Impacgo"
-  description="Custom Dynamics 365 F&O development and X++ customisation services in India. System enhancements, integrations, mobile solutions, and ongoing technical development."
-  keywords="D365FO development India, X++ developer India, Dynamics 365 customisation India, D365 F&O enhancement India"
+  title="Software Development Services | Custom ERP & App Development | Global Specialists"
+  description="Specialist software development services worldwide. Custom ERP extensions, web apps, mobile apps, Power Apps, and integration development. India and global enterprises."
+  keywords="software development services, custom software development, ERP development, web app development, mobile app development, software development India, software development global"
   path="/services/development"
-  schema={serviceSchema}
+  schema={[serviceSchema, breadcrumbSchema]}
 />
     <ScrollToTop />
     <POSHeader />

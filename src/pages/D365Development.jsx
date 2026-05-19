@@ -202,12 +202,12 @@ export default function D365Development() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <SEO
-        title="D365FO Development Partner India | X++ Developer · Custom Extensions | Impacgo"
-        description="Specialist Microsoft Dynamics 365 Finance & Operations development services in India. X++ extensions, custom forms, integrations, data entities, batch jobs, and full Azure DevOps ALM. Upgrade-safe, production-grade D365FO code. Free consultation."
-        keywords="D365FO development India, X++ developer India, Dynamics 365 customisation India, D365 F&O extensions India, Dynamics 365 development partner India, X++ programmer India, D365FO ALM Azure DevOps India, D365 integration development India, AX developer India, D365FO development Visakhapatnam"
-        path="/services/d365-development"
-        schema={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+  title="D365FO Development Partner | X++ Developer · Custom Extensions | Global Specialists"
+  description="Specialist Microsoft Dynamics 365 Finance & Operations development services worldwide. X++ extensions, custom forms, integrations, data entities, batch jobs, and full Azure DevOps ALM. Upgrade-safe, production-grade D365FO code. India compliance built in. Free consultation."
+  keywords="D365FO development, X++ developer, Dynamics 365 customisation, D365 F&O extensions, Dynamics 365 development partner, X++ programmer, D365FO ALM Azure DevOps, D365 integration development, AX developer, D365FO development India, X++ developer India, D365FO global development"
+  path="/services/d365-development"
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+/>
 
       <ScrollToTop />
       <POSHeader />

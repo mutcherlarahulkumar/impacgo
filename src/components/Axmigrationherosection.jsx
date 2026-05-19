@@ -47,7 +47,7 @@ export default function AXMigrationHeroSection() {
               <span className="bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent">
                 Dynamics 365 F&O
               </span>{" "}
-              Migration Partner — India
+              — Global Migration Specialists
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-xl">

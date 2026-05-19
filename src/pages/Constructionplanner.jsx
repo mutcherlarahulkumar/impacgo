@@ -128,11 +128,11 @@ const breadcrumbSchema = createBreadcrumbSchema([
   return (
     <div>
       <SEO
-  title="Construction Planner | AI-Powered Construction Planning Software India | Impacgo"
-  description="AI-powered construction planning software for architects and construction teams in India. Floor plan analysis, automated cost estimation, material optimisation, and dynamic project timelines."
-  keywords="construction planning software India, AI construction software India, cost estimation software construction India, architect software India, construction project management India, AI for construction India"
+  title="Construction Planner Software | Project Management for Construction | Global"
+  description="Construction project planning and management software for global construction firms. Project scheduling, resource planning, cost tracking, and progress reporting. India and global construction."
+  keywords="construction planner software, construction project management, construction scheduling software, construction India, construction software global, project management construction"
   path="/products/construction-planner"
-  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
+  schema={[productSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />
