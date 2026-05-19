@@ -12,41 +12,13 @@ import SEO from "../components/SEO";
 import { organizationSchema, localBusinessSchema } from "../components/schemas";
 import emailjs from "@emailjs/browser";
 import {
-  ChevronDown,
-  CheckCircle,
-  Mail,
-  User,
-  Phone,
-  MessageSquare,
-  Code2,
-  Plug,
-  Database,
-  Factory,
-  Bot,
-  Package,
-  Lightbulb,
-  Rocket,
-  Smartphone,
-  Globe,
-  Cpu,
-  Workflow,
-  BrainCircuit,
-  Eye,
-  TrendingUp,
-  GitBranch,
-  ShieldCheck,
-  Zap,
-  HeartHandshake,
-  Layers,
-  Target,
-  LifeBuoy,
-  Tractor,
-  ClipboardList,
-  Building2,
-  AlertTriangle,
-  BarChart3,
-  Sparkles, 
-  Heart,
+  ChevronDown, CheckCircle, Mail, User, Phone, MessageSquare,
+  Code2,          // ← only once here
+  Plug, Database, Factory, Bot, Package, Lightbulb, Rocket,
+  Smartphone, Globe, Cpu, Workflow, BrainCircuit, Eye,
+  TrendingUp, GitBranch, ShieldCheck, Zap, HeartHandshake,
+  Layers, Target, LifeBuoy, Tractor, ClipboardList, Building2,
+  AlertTriangle, BarChart3, Sparkles, Heart,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -189,9 +161,9 @@ function IndustriesSection() {
       image: supplyChain,
       path: "/industries/distribution", // No page yet
     },
-    {
+   {
   name: "Retail & E-Commerce",
-  description: "...",
+  description: "Omnichannel retail solutions with POS, ERP, and customer experience optimization.",
   image: retail,
   path: "/industries/retail",
 },
@@ -300,11 +272,11 @@ function ServicesSection() {
     path: "/services/ai-builder",
   },
     {
-      icon: Code2,
-      title: "Application Development",
-      description: "Mobile & Web Apps built for scale and performance",
-      path: "/services/app-development",
-    },
+  icon: Globe,
+  title: "Application Development",
+  description: "Mobile & Web Apps built for scale and performance",
+  path: "/services/app-development",
+},
     {
   icon: Code2,
   title: "D365FO Development & Customisation",
