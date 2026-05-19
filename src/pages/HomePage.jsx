@@ -45,7 +45,8 @@ import {
   Building2,
   AlertTriangle,
   BarChart3,
-  Sparkles,
+  Sparkles, 
+  Heart,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -189,11 +190,11 @@ function IndustriesSection() {
       path: "/industries/distribution", // No page yet
     },
     {
-      name: "Retail & E-Commerce",
-      description: "Omnichannel retail solutions with POS, ERP, and customer experience optimization.",
-      image: retail,
-      path: null,
-    },
+  name: "Retail & E-Commerce",
+  description: "...",
+  image: retail,
+  path: "/industries/retail",
+},
     {
       name: "Healthcare",
       description: "Patient management, compliance-driven ERP solutions, and healthcare process automation.",
@@ -305,6 +306,18 @@ function ServicesSection() {
       description: "Mobile & Web Apps built for scale and performance",
       path: "/services/app-development",
     },
+    {
+  icon: Code2,
+  title: "D365FO Development & Customisation",
+  description: "X++ extensions, custom forms, integrations & ALM with Azure DevOps — upgrade-safe D365FO code",
+  path: "/services/d365-development",
+},
+{
+  icon: Heart,
+  title: "Dynamics 365 CRM",
+  description: "D365 Sales, Customer Service, Marketing & Field Service — natively connected to D365 F&O",
+  path: "/services/d365-crm",
+},
     {
       icon: Plug,
       title: "Integrations",

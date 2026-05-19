@@ -36,6 +36,11 @@ import AIBuilder from "./pages/AIBuilder";
 // Industry Pages
 import D365Manufacturing from "./pages/D365Manufacturing";
 import D365Distribution from "./pages/D365Distribution";
+import D365Retail from "./pages/D365retail";
+
+// D365 service pages
+import D365Development from "./pages/D365development";
+import D365CRM from "./pages/D365crm";
 
 function App() {
   return (
@@ -106,6 +111,10 @@ function App() {
           path="/industries/distribution"
           element={<D365Distribution />}
         />
+        <Route
+          path="/industries/retail"
+          element={<D365Retail />}
+        />
 
         {/* Blog */}
         <Route path="/blog" element={<BlogIndex />} />
@@ -116,6 +125,10 @@ function App() {
 
         {/* Contact */}
         <Route path="/contact" element={<ContactUs />} />
+
+        {/* D365 Development & CRM */}
+        <Route path="/services/d365-development" element={<D365Development />} />
+        <Route path="/services/d365-crm" element={<D365CRM />} />
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />

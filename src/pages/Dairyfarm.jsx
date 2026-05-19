@@ -127,7 +127,7 @@ const breadcrumbSchema = createBreadcrumbSchema([
 
   return (
     
-    <div>\
+    <div>
       <SEO
   title="Dairy Farm Management System India | Milk Production Tracking Software | Impacgo"
   description="Complete dairy farm management software for milk production tracking, herd health, breeding, feed management, and farm analytics. Built for modern dairy operations in India — small farms to co-operatives."
