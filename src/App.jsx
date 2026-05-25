@@ -28,6 +28,7 @@ import AXMigration from "./pages/Axmigration";
 // Blog Pages
 import BlogIndex from "./pages/blog/BlogIndex";
 import AX2012EndOfSupport2028Blog from "./pages/blog/AX2012EndOfSupport2028Blog";
+import D365FOImplementationTimelineBlog from "./pages/blog/D365foimplementationtimelineblog";
 
 // Power Platform Pages
 import PowerApps from "./pages/Powerapps";
@@ -181,6 +182,11 @@ function App() {
         <Route
           path="/blog/ax-2012-end-of-support-2028-india"
           element={<AX2012EndOfSupport2028Blog />}
+        />
+
+        <Route
+        path="/blog/how-long-does-d365fo-implementation-take"
+        element={<D365FOImplementationTimelineBlog />}
         />
 
         {/* ---------------- CONTACT ---------------- */}
