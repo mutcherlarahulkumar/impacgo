@@ -6,29 +6,25 @@
 // 4. Add the URL to public/sitemap.xml
 
 export const blogPosts = [
+  // NEW POST — D365FO Implementation Timeline
+  {
+    slug: "how-long-does-d365fo-implementation-take",
+    title: "How Long Does a D365FO Implementation Take? A Realistic Timeline Guide for 2026",
+    excerpt: "Microsoft Dynamics 365 Finance & Operations implementation timeline guide. Realistic durations for SMEs, mid-market, and global enterprises. Honest insights from a D365FO developer covering phase-by-phase breakdown, what speeds up projects, and what slows them down.",
+    category: "D365 Implementation",
+    datePublished: "2026-05-19",
+    readTime: "12 min read",
+  },
+
+  // EXISTING POST — AX 2012 End of Support
   {
     slug: "ax-2012-end-of-support-2028-india",
-    title:
-      "AX 2012 End of Support in 2028 — What Every Indian Enterprise Needs to Know Now",
-    excerpt:
-      "Microsoft AX 2012 R3 extended support ends in January 2028. Indian enterprises running on AX 2012 face hard deadlines for security, GST compliance, and operational continuity. Here's what every CTO, CFO, and IT head needs to plan for — and why starting the migration assessment in 2026 is critical.",
-    coverImage: "/og-ax-blog.jpg", // fallback to /logo.png if missing
+    title: "AX 2012 End of Support in 2028 — What Every Indian Enterprise Needs to Know Now",
+    excerpt: "Microsoft has announced end of support for Dynamics AX 2012 by January 2028. Here's the complete migration guide for Indian enterprises...",
     category: "AX 2012 Migration",
-    author: "Impacgo Solutions",
     datePublished: "2026-05-18",
-    dateModified: "2026-05-18",
     readTime: "8 min read",
-    tags: [
-      "AX 2012",
-      "D365 Finance and Operations",
-      "ERP Migration",
-      "Microsoft Dynamics",
-      "India ERP",
-    ],
-    relatedServicePath: "/services/ax-migration",
-    relatedServiceLabel: "AX 2012 to D365FO Migration Services",
   },
-  // Add more posts here over time...
 ];
 
 export const getBlogPostBySlug = (slug) =>
