@@ -132,7 +132,7 @@ const breadcrumbSchema = createBreadcrumbSchema([
   description="Construction project planning and management software for global construction firms. Project scheduling, resource planning, cost tracking, and progress reporting. India and global construction."
   keywords="construction planner software, construction project management, construction scheduling software, construction India, construction software global, project management construction"
   path="/products/construction-planner"
-  schema={[productSchema, breadcrumbSchema]}
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />

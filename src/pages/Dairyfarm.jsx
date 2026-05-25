@@ -110,19 +110,20 @@ export default function DairyFarm() {
   },
 ];
 
-const serviceSchema = createServiceSchema({
-  serviceName: "Dairy Farm Management System",
-  description: "Complete dairy farm management software for milk production tracking, herd health, breeding, feed management, finance, and analytics for modern dairy operations in India.",
-  serviceType: "Farm Management Software",
-  path: "/products/dairy-farm",
-});
-
 const faqSchema = createFaqSchema(faqs);
+
+const serviceSchema = createServiceSchema({
+  serviceName: "Dairy Farm Management Software",
+  description:
+    "AI-powered dairy farm management software for herd tracking, milk production, breeding, feed management, and farm analytics.",
+  serviceType: "Dairy Farm Management Software",
+  path: "/products/dairy-farm-management",
+});
 
 const breadcrumbSchema = createBreadcrumbSchema([
   { name: "Home", path: "/" },
   { name: "Products", path: "/products" },
-  { name: "Dairy Farm Management", path: "/products/dairy-farm" },
+  { name: "Dairy Farm Management", path: "/products/dairy-farm-management" },
 ]);
 
   return (
@@ -133,7 +134,7 @@ const breadcrumbSchema = createBreadcrumbSchema([
   description="Cloud-based dairy farm management system for global dairy operations. Cattle tracking, milk production, breeding, health records, and financial reporting. India and global dairy farms."
   keywords="dairy farm management software, dairy farm system, cattle management software, milk production software, dairy farm cloud, dairy farm India, dairy management global"
   path="/products/dairy-farm"
-  schema={[productSchema, breadcrumbSchema]}
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />

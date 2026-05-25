@@ -132,7 +132,7 @@ const breadcrumbSchema = createBreadcrumbSchema([
   description="Mobile work task management app for field service teams worldwide. Task assignment, real-time tracking, photo capture, and reporting. India and global field service operations."
   keywords="work task management app, field service app, task management mobile, field service software India, work order management, mobile task app global"
   path="/products/work-task"
-  schema={[productSchema, breadcrumbSchema]}
+  schema={[serviceSchema, faqSchema, breadcrumbSchema]}
 />
       <ScrollToTop />
       <POSHeader />
