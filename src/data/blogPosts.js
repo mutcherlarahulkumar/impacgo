@@ -1,12 +1,15 @@
-// Central registry of all blog posts.
-// To add a new blog post:
-// 1. Add a new entry below following the same structure
-// 2. Create the corresponding page file in src/pages/blog/
-// 3. Add the route in App.jsx
-// 4. Add the URL to public/sitemap.xml
-
 export const blogPosts = [
-  // NEW POST — D365FO Implementation Timeline
+  // NEW POST — Excel to Power BI (Blog #3)
+  {
+    slug: "replace-excel-reporting-with-power-bi-d365fo",
+    title: "How to Replace Excel Reporting with Power BI in D365FO — A Practical Guide for Finance Teams",
+    excerpt: "Stop closing your month-end with Excel. Here's how finance teams replace spreadsheet-based reporting with live Power BI dashboards connected to Dynamics 365 F&O — including the 5 essential dashboards, a 4-8 week implementation roadmap, and common mistakes to avoid.",
+    category: "Power BI",
+    datePublished: "2026-05-20",
+    readTime: "11 min read",
+  },
+
+  // EXISTING POST — D365FO Implementation Timeline
   {
     slug: "how-long-does-d365fo-implementation-take",
     title: "How Long Does a D365FO Implementation Take? A Realistic Timeline Guide for 2026",

@@ -45,6 +45,10 @@ import D365Retail from "./pages/D365Retail";
 import D365Development from "./pages/D365Development";
 import D365CRM from "./pages/D365CRM";
 
+import ExcelToPowerBIBlog from "./pages/blog/ExceltopowerBI";
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -188,7 +192,10 @@ function App() {
         path="/blog/how-long-does-d365fo-implementation-take"
         element={<D365FOImplementationTimelineBlog />}
         />
-
+          <Route 
+  path="/blog/replace-excel-reporting-with-power-bi-d365fo" 
+  element={<ExcelToPowerBIBlog />} 
+/>
         {/* ---------------- CONTACT ---------------- */}
         <Route
           path="/contact"
@@ -206,4 +213,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;  
