@@ -29,6 +29,7 @@ import AXMigration from "./pages/Axmigration";
 import BlogIndex from "./pages/blog/BlogIndex";
 import AX2012EndOfSupport2028Blog from "./pages/blog/AX2012EndOfSupport2028Blog";
 import D365FOImplementationTimelineBlog from "./pages/blog/D365foimplementationtimelineblog";
+import PowerAppsD365FOBlog from "./pages/blog/PowerAppsD365FOBlog";
 
 // Power Platform Pages
 import PowerApps from "./pages/Powerapps";
@@ -201,7 +202,12 @@ function App() {
           <Route 
   path="/blog/replace-excel-reporting-with-power-bi-d365fo" 
   element={<ExcelToPowerBIBlog />} 
+  
 />
+        <Route
+          path="/blog/power-apps-for-d365fo"
+          element={<PowerAppsD365FOBlog />}
+        />
         {/* ---------------- CONTACT ---------------- */}
         <Route
           path="/contact"

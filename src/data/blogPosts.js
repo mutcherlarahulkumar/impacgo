@@ -1,4 +1,14 @@
 export const blogPosts = [
+
+   // Power Apps for D365FO (Blog #5)
+  {
+    slug: "power-apps-for-d365fo",
+    title: "Power Apps for D365FO: Extending Dynamics 365 Finance & Operations with Low-Code Applications",
+    excerpt: "Discover how Microsoft Power Apps extends D365FO with custom applications, process automation, and mobile solutions. Learn about integration methods, real-world use cases, key benefits, and best practices for successful Power Apps implementations.",
+    category: "Power Platform",
+    datePublished: "2026-06-18",
+    readTime: "12 min read",
+  },
    // D365FO vs SAP vs Oracle NetSuite (Blog #4)
   {
     slug: "d365fo-vs-sap-s4hana-vs-oracle-netsuite",
